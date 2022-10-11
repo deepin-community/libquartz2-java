@@ -1,0 +1,49 @@
+Source: libquartz2-java
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Varun Hiremath <varun@debian.org>,
+ Torsten Werner <twerner@debian.org>,
+ tony mancill <tmancill@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ default-jdk,
+ javahelper,
+ junit4,
+ libasm-java (>= 5.0),
+ libc3p0-java,
+ libcommons-dbcp-java,
+ libcommons-logging-java,
+ libcommons-validator-java,
+ libgeronimo-commonj-spec-java,
+ libgeronimo-ejb-3.2-spec-java,
+ libgeronimo-jms-1.1-spec-java,
+ libgeronimo-jta-1.2-spec-java,
+ libhamcrest-java,
+ libhikaricp-java,
+ libmail-java,
+ libmaven-antrun-plugin-java,
+ libmaven-bundle-plugin-java,
+ libmaven-shade-plugin-java,
+ libservlet-api-java,
+ maven-debian-helper (>= 1.4)
+Standards-Version: 4.6.0
+Vcs-Git: https://salsa.debian.org/java-team/libquartz2-java.git
+Vcs-Browser: https://salsa.debian.org/java-team/libquartz2-java
+Homepage: https://quartz-scheduler.org
+Rules-Requires-Root: no
+
+Package: libquartz2-java
+Architecture: all
+Depends: ${maven:Depends}, ${misc:Depends}
+Suggests: ${maven:OptionalDepends}
+Description: open source job scheduling system
+ Quartz is a full-featured, open source job scheduling system that can
+ be integrated with, or used along side virtually any J2EE or J2SE
+ application - from the smallest stand-alone application to the
+ largest e-commerce system. Quartz can be used to create simple or
+ complex schedules for executing tens, hundreds, or even
+ tens-of-thousands of jobs; jobs whose tasks are defined as standard
+ Java components or EJBs. The Quartz Scheduler includes many
+ enterprise-class features, such as JTA transactions and clustering.

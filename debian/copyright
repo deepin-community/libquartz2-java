@@ -1,0 +1,25 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: Quartz Scheduler
+Upstream-Contact:  James House <jhouse@terracotta.org> as Primary Developer
+                   Jason Voegele <jvoegele@terracotta.org> as Build Engineer, Release Engineer
+Source: http://quartz-scheduler.org
+Files-Excluded: .settings
+                *.jar
+                */docs/*
+
+Files: *
+Copyright: 2005-2019, Terracotta, Inc.
+License: Apache-2.0
+
+Files: debian/*
+Copyright: 2007-2008, Varun Hiremath <varunhiremath@gmail.com>
+           2007-2011, Torsten Werner <twerner@debian.org>
+           2009, Michael Koch <konqueror@gmx.de>
+           2012, Mathieu Malaterre <malat@debian.org>
+           2014-2018, Emmanuel Bourg <ebourg@apache.org>
+           2017-2020, tony mancill <tmancill@debian.org>
+License: Apache-2.0
+
+License: Apache-2.0
+ On Debian GNU/Linux system you can find the complete text of the
+ Apache-2.0 license in '/usr/share/common-licenses/Apache-2.0'

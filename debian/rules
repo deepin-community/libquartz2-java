@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+include /usr/share/dpkg/pkg-info.mk
+
+%:
+	dh $@ --with javahelper
+
+override_dh_auto_install:
+	dh_auto_install
+
+	# Install only the all in one jar
+	rm -Rf debian/libquartz2-java/usr/share/java/
+	rm -Rf debian/libquartz2-java/usr/share/maven-repo/
+	mh_installpom -plibquartz2-java --no-parent -e$(DEB_VERSION_UPSTREAM) quartz/target/dependency-reduced-pom.xml
+	mh_installjar -plibquartz2-java --java-lib -e$(DEB_VERSION_UPSTREAM) --usj-name=quartz2 quartz/target/dependency-reduced-pom.xml quartz/target/quartz-$(DEB_VERSION_UPSTREAM).jar

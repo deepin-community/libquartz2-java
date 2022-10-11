@@ -1,0 +1,234 @@
+libquartz2-java (2.3.2-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Bump Standards-Version to 4.6.0
+  * Update build-dep on libservlet3.1-java to libservlet-api-java
+
+ -- tony mancill <tmancill@debian.org>  Tue, 12 Oct 2021 22:38:11 -0700
+
+libquartz2-java (2.3.2-1) experimental; urgency=medium
+
+  * Update debian/watch for canonical Github tags format
+  * New upstream version 2.3.2
+  * Remove 03-CVE-2019-13990.patch applied upstream
+  * Update patches for new upstream release
+  * Use debhelper-compat 13
+  * Freshen debian/copyright
+  * Update debian/maven.rules for new upstream version
+  * Bump Standards-Version to 4.5.0
+  * Set "Rules-Requires-Root: no" in debian/control
+  * Use https URL for Homepage in debian/control
+
+ -- tony mancill <tmancill@debian.org>  Mon, 06 Jul 2020 07:01:27 -0700
+
+libquartz2-java (2.3.0-3) unstable; urgency=medium
+
+  * Add patch for CVE-2019-13990 (Closes: #933170)
+
+ -- tony mancill <tmancill@debian.org>  Sun, 05 Jul 2020 21:39:41 -0700
+
+libquartz2-java (2.3.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fixed the missing dependencies on the binary package
+  * Standards-Version updated to 4.2.1
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Fri, 05 Oct 2018 13:47:32 +0200
+
+libquartz2-java (2.3.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Refreshed the patch
+    - New dependency on libhikaricp-java
+  * Fixed the build failure with Java 10 (Closes: #905013)
+  * Ensure the Java 8 compatibility when built with Java 9 or later
+  * Standards-Version updated to 4.1.5
+  * Switch to debhelper level 11
+  * Use salsa.debian.org Vcs-* URLs
+  * Track and download the new releases from GitHub
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 30 Jul 2018 17:08:12 +0200
+
+libquartz2-java (2.2.3-3) unstable; urgency=medium
+
+  * Team upload.
+  * Replaced the build dependency on glassfish-j2ee with the Geronimo spec jars
+  * Standards-Version updated to 4.1.2
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 04 Dec 2017 12:20:27 +0100
+
+libquartz2-java (2.2.3-2) unstable; urgency=medium
+
+  [ Emmanuel Bourg ]
+  * Team upload.
+  * Removed the unused dependency on libcommons-modeler-java
+  * Switch to debhelper level 10
+
+  [ tony mancill ]
+  * Update junit build-dep to junit4 (Closes: #866558)
+  * Add myself to Uploaders
+  * Update VCS URLs, which were pointing at libquartz-java
+  * Bump Standards-Version to 4.0.0
+
+ -- tony mancill <tmancill@debian.org>  Thu, 29 Jun 2017 20:57:49 -0700
+
+libquartz2-java (2.2.3-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release (Closes: #694341)
+    - Renamed the package to libquartz2-java
+    - Build the new modules (core, jobs, plugins)
+    - Enabled the commonj support
+    - New dependencies on libc3p0-java, libgeronimo-commonj-spec-java,
+      libmaven-antrun-plugin-java, libmaven-bundle-plugin-java
+      and libmaven-shade-plugin-java
+    - Disabled the unit tests
+  * Removed the doc package
+  * Build with the DH sequencer instead of CDBS
+  * Build depend on libasm-java (>= 5.0) instead of libasm4-java
+  * Removed the unused build dependency on glassfish-activation
+  * Standards-Version updated to 3.9.8 (no changes)
+  * Use secure Vcs-* fields
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sun, 03 Apr 2016 16:13:56 +0200
+
+libquartz-java (1:1.8.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+    - Ignore the new modules (commonj, oracle, weblogic, all)
+    - New build dependency on libhamcrest-java
+  * Suggest the optional dependencies instead of recommending them
+  * Standards-Version updated to 3.9.6 (no changes)
+  * Use XZ compression for the upstream tarball
+  * Moved the package to Git
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Wed, 21 Oct 2015 13:13:51 +0200
+
+libquartz-java (1:1.7.3-5) unstable; urgency=medium
+
+  * Team upload
+  * Build depend on libasm4-java instead of libasm3-java
+  * Build depend on libmail-java instead of glassfish-mail
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Sat, 13 Sep 2014 10:26:21 +0200
+
+libquartz-java (1:1.7.3-4) unstable; urgency=low
+
+  * Team upload
+
+  [ Mathieu Malaterre ]
+  * Remove self from Uploaders
+
+  [ Emmanuel Bourg ]
+  * debian/control:
+    - Build depend on libservlet3.1-java instead of libservlet2.5-java
+    - Use canonical URLs for the Vcs-* fields
+    - Updated Standards-Version to 3.9.5 (no changes)
+  * Switch to debhelper level 9
+
+ -- Emmanuel Bourg <ebourg@apache.org>  Mon, 08 Sep 2014 00:32:08 +0200
+
+libquartz-java (1:1.7.3-3) unstable; urgency=low
+
+  * Revert to release 1.7.3 since 2.x is not compatible. Closes: #669080
+   - This upload with an epoch value overwrite a 2.1.3 upload which broke
+     binary compat. See also #669081 for more info on epoch reason.
+
+ -- Mathieu Malaterre <malat@debian.org>  Sat, 21 Apr 2012 10:36:06 +0200
+
+libquartz-java (2.1.3-1) unstable; urgency=low
+
+  * New upstream. Closes: #667598
+  * Add myself as uploader,
+  * Remove Michael Koch from uploaders. Closes: #654091
+  * Bump Std-Vers to 3.9.3, no changes needed
+
+ -- Mathieu Malaterre <malat@debian.org>  Mon, 09 Apr 2012 17:51:52 +0200
+
+libquartz-java (1.7.3-2) unstable; urgency=low
+
+  * Add missing Build-Depends: libcommons-validator-java. (Closes: #643503)
+  * Fix lintian warnings for debian/copyright.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 27 Sep 2011 20:03:48 +0200
+
+libquartz-java (1.7.3-1) unstable; urgency=low
+
+  * New upstream release.
+    - Do not build modules quartz-jboss and examples.
+  * Update d/watch and d/orig-tar.sh to create the orig tarball from the SVN
+    repo.
+  * Update Homepage field.
+  * Use Maven to build package because upstream has switched to Maven.
+  * Switch to source format 3.0.
+  * Remove Java runtime from Depends.
+  * Add a *-doc package.
+
+ -- Torsten Werner <twerner@debian.org>  Wed, 17 Aug 2011 13:57:53 +0200
+
+libquartz-java (1.6.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Removed ${shlibs:Depends} from Depends.
+
+ -- Michael Koch <konqueror@gmx.de>  Wed, 04 Nov 2009 17:01:27 +0100
+
+libquartz-java (1.6.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Build-Depends on default-jdk.
+  * Build-Depends on debhelper (>= 7).
+  * Moved package to section 'java'.
+  * Added myself to Uploaders.
+  * Updated Standards-Version to 3.8.3.
+
+ -- Michael Koch <konqueror@gmx.de>  Fri, 02 Oct 2009 22:47:16 +0200
+
+libquartz-java (1.6.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Torsten Werner <twerner@debian.org>  Fri, 05 Dec 2008 00:16:49 +0100
+
+libquartz-java (1.6.2+dak1-2) unstable; urgency=low
+
+  * Fix symlink version, thanks to Damien Raude-Morvan (Closes: #507323)
+
+ -- Varun Hiremath <varun@debian.org>  Mon, 01 Dec 2008 02:30:16 -0500
+
+libquartz-java (1.6.2+dak1-1) unstable; urgency=low
+
+  * Move package to main.
+
+ -- Torsten Werner <twerner@debian.org>  Tue, 18 Nov 2008 21:49:17 +0100
+
+libquartz-java (1.6.2-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump up Standards-Version: 3.8.0 (no changes).
+  * Do not quote the full text of the Apache license any more.
+
+ -- Torsten Werner <twerner@debian.org>  Sat, 08 Nov 2008 23:23:30 +0100
+
+libquartz-java (1.6.1~RC1-1) unstable; urgency=low
+
+  * New upstream release
+  * Bump Standards-Version to 3.7.3
+  * debian/rules: fix jar symlink version
+
+ -- Varun Hiremath <varun@debian.org>  Fri, 02 May 2008 12:46:57 +0530
+
+libquartz-java (1.6.0-2) unstable; urgency=low
+
+  * Move package to contrib because of Build-Depends: glassfish-javaee.
+  * Use upstream provided build.xml.
+
+ -- Torsten Werner <twerner@debian.org>  Fri, 30 Nov 2007 14:10:48 +0100
+
+libquartz-java (1.6.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #450612)
+
+ -- Varun Hiremath <varunhiremath@gmail.com>  Tue, 24 Apr 2007 17:19:10 +0530

@@ -1,0 +1,14 @@
+Description: Fixes the compatibility with Java 10
+Author: Emmanuel Bourg <ebourg@apache.org>
+Bug: https://github.com/quartz-scheduler/quartz/pull/252
+--- a/quartz-core/src/main/java/org/quartz/xml/XMLSchedulingDataProcessor.java
++++ b/quartz-core/src/main/java/org/quartz/xml/XMLSchedulingDataProcessor.java
+@@ -202,7 +202,7 @@
+               return XMLConstants.NULL_NS_URI;
+           }
+         
+-          public Iterator<?> getPrefixes(String namespaceURI)
++          public Iterator<String> getPrefixes(String namespaceURI)
+           {
+               // This method isn't necessary for XPath processing.
+               throw new UnsupportedOperationException();
